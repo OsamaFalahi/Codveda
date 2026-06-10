@@ -1,0 +1,27 @@
+{
+  "name": "codveda-level1-task2",
+  "version": "1.0.0",
+  "description": "Simple REST API for Codveda Full-Stack Developer Training - Level 1 Task 2",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "codveda",
+    "training",
+    "rest-api",
+    "express",
+    "crud"
+  ],
+  "author": "Codveda Training Intern",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
