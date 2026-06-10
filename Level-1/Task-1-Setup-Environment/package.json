@@ -1,0 +1,29 @@
+{
+  "name": "codveda-level1-task1",
+  "version": "1.0.0",
+  "description": "Development environment setup for Codveda Full-Stack Developer Training - Level 1 Task 1",
+  "main": "check-env.js",
+  "scripts": {
+    "start": "node check-env.js",
+    "check-versions": "node check-env.js",
+    "env-check": "node check-env.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "codveda",
+    "training",
+    "full-stack",
+    "development",
+    "environment-setup"
+  ],
+  "author": "Codveda Training Intern",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/codveda-training.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
