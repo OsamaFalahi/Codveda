@@ -5,10 +5,14 @@
  */
 
 const express = require('express');
+const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
 const { notFoundHandler, globalErrorHandler } = require('./middleware/errorHandler');
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
