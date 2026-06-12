@@ -1,0 +1,23 @@
+{
+  "name": "codveda-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "prisma": "prisma",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:studio": "prisma studio",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@prisma/client": "^5.8.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+"devDependencies": {
+    "nodemon": "^3.0.0",
+    "prisma": "^5.8.0"
+  }
+}
