@@ -170,6 +170,3 @@ This production model is optimized for frictionless continuous cloud deployment 
 * **Osama AlFalahi** - Full Stack Developer / Software Engineer
 * *Graduated with a degree in Information Technology from the University of Modern Sciences.*
 
-```
-
-```
