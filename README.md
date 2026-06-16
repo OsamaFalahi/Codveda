@@ -1,6 +1,3 @@
-إليك الكود الكامل لملف `README.md` الرئيسي والموحد لجميع المستويات الثلاثة بتنسيق Markdown احترافي، ومصمم ليوضع مباشرة في المجلد الرئيسي (Root) للمستودع الخاص بك على GitHub.
-
-الملف يبرز الهيكل التنظيمي للمشروع، ويستعرض التدرج الهندسي للمهام، ويشرح للمقيمين ومسؤولي التوظيف تفاصيل تشغيل واختبار المنظومة بالكامل:
 
 ```markdown
 # Full-Stack Web & Mobile Development Training - Codveda
@@ -13,7 +10,7 @@ Welcome to my official repository for the Codveda Full-Stack Development Trainin
 
 This repository is organized as a unified workspace containing all three progressive training levels:
 
-```text
+
 .
 ├── Level-1/
 │   ├── Task-1-Basic-HTML-CSS/
@@ -27,7 +24,6 @@ This repository is organized as a unified workspace containing all three progres
         ├── backend/                   # Scalable Express & Database engine
         └── frontend/                  # Responsive React client (Vite)
 
-```
 
 ---
 
