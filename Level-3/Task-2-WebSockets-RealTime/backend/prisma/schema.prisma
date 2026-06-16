@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String   @db.VarChar(255)
+  description String?   @db.VarChar(1000)  //Pros: Optional rich-text field for product details; nullable for backward compat
+  price       Float
+  quantity    Int?                     //Pros: Stock tracking field; nullable to avoid migration conflicts on existing rows
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now()) //Pros: Enables compound index for time-based queries (e.g., newest products first)
+
+  @@map("products")
+  @@index([name])                          //Pros: Accelerates product search by name in admin/product list endpoints
+  @@index([userId])                        //Pros: Speeds up JOIN queries to fetch all products for a specific user
+  @@index([userId, createdAt(ordered: DESC)], map: "idx_product_user_created") //Pros: Optimizes compound queries filtering by user AND sorting by recency
+  @@index([price])                         //Pros: Enhances performance on price-range filters and sorting operations
+  @@index([quantity])                      //Pros: Supports inventory dashboards: e.g., "find products where quantity = 0"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique @db.VarChar(255) //Pros: Unique index enforces email uniqueness and speeds up login/signup lookups
+  name      String?
+  password  String   @db.VarChar(255)
+  role      String   @default("USER") @db.VarChar(20)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  products  Product[]
+
+  @@map("users")
+}
